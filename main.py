@@ -25,7 +25,6 @@ def us_constitution_helper(question):
 
     # EMBED THE Documents (now in chunks) to a persisted ChromaDB
     embedding_function = OpenAIEmbeddings()
-    embedding_function = OpenAIEmbeddings()
     #run :: pip install chromadb -to install Chroma vector DB
     db = Chroma.from_documents(docs, embedding_function, persist_directory='./US_Constitution')
     db.persist()
